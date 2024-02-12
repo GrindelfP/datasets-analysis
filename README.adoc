@@ -1,0 +1,51 @@
+= Datasets analysis practice =
+
+== Task ==
+
+1. Pick 3 datasets from kaggle.com
+2. Describe the type of each feature from each dataset
+3. Analyze the data from one of the datasets with the most unique types of features
+4. Formalize and normalize the data
+5. Write conclusions about the work done
+
+The work shoud be completed as a Jupyter notebook and passed as PDF file.
+
+== Datasets ==
+
+1. Chess Game Dataset (Lichess) - https://www.kaggle.com/datasnaek/chess
+2. Google Play Store Apps - https://www.kaggle.com/lava18/google-play-store-apps
+3. The books of Skyrim - https://www.kaggle.com/datasets/aadamg/skyrim-books-from-uesp
+
+== Formalization ways ==
+The formalization of the data can be done in the multiple ways, dependently on the type of each feature of a dataset.
+
+=== Binary features ===
+Define which one of the two present values is 0 and which is 1. Then, replace the values with 0 and 1.
+
+=== Nominal features ===
+Normalize the data by creating a column for each unique value of the feature. Then, replace the values with 0 and 1. 
+Example: 
+Color of eye: blue, green, brown, grey.
+
+[options="header"]
+.Table 1. Representation of the nominal feature as columns of binary values
+|================
+| blue | green | brown | grey
+| 1   | 0 | 0 | 0
+| 0   | 1 | 0 | 0
+| 0   | 0 | 1 | 0
+| 0   | 0 | 0 | 1
+| ...   | ... | ... | ...
+|================
+
+
+=== Ranged features ===
+Divide the values by the greatest value of the feature, which will make the values to be in the range from 0 to 1.
+
+=== Features of quantity ===
+Here comes the following algorithm:
+
+1. Round the values to the nearest integer
+2. Sort the values in ascending order
+3. Divide the values into two groups: 0%..50% of maximum value and 51%..100% of maximum value
+4. Assign 0 to the first group and 1 to the second group
