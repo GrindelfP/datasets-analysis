@@ -47,5 +47,5 @@ Here comes the following algorithm:
 
 1. Round the values to the nearest integer
 2. Sort the values in ascending order
-3. Divide the values into two groups: 0%..50% of maximum value and 51%..100% of maximum value
+3. Divide the values into two groups: 0%..50% of values and 51%..100%
 4. Assign 0 to the first group and 1 to the second group
